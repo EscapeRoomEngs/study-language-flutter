@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:study_language/widget/custom_app_bar.dart';
 import 'package:study_language/main.dart';
+import 'package:study_language/widget/custom_app_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -15,12 +15,18 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(title: "홈"),
-      body: Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-        country(name: "한국어", image: 'assets/image/ic_flag_kr.svg'),
-        country(name: "영어", image: 'assets/image/ic_flag_us.svg'),
-        country(name: "일본어", image: 'assets/image/ic_flag_jp.svg'),
-        country(name: "중국어", image: 'assets/image/ic_flag_cn.svg')
-      ]),
+      body: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            country(name: "한국어", image: 'assets/image/ic_flag_kr.svg'),
+            const SizedBox(width: 24),
+            country(name: "영어", image: 'assets/image/ic_flag_us.svg'),
+            const SizedBox(width: 24),
+            country(name: "일본어", image: 'assets/image/ic_flag_jp.svg'),
+            const SizedBox(width: 24),
+            country(name: "중국어", image: 'assets/image/ic_flag_cn.svg')
+          ]),
       bottomNavigationBar: bottomNavigation(),
     );
   }
@@ -28,13 +34,20 @@ class _HomeScreenState extends State<HomeScreen> {
   //region body
 
   Widget country({required String name, required String image}) {
-    return GestureDetector(
-        onTap: () => {Navigator.pushNamed(context, Routes.selectTheme)},
-        behavior: HitTestBehavior.opaque,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [SvgPicture.asset(image), Text(name)],
-        ));
+    return Center(
+        child: InkWell(
+            onTap: () => {Navigator.pushNamed(context, Routes.selectTheme)},
+            child: Container(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset(image),
+                    const SizedBox(height: 7),
+                    Text(name)
+                  ],
+                ))));
   }
 
   //endregion
