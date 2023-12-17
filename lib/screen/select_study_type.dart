@@ -13,7 +13,7 @@ class SelectStudyTypeScreen extends StatefulWidget {
 
 class _SelectStudyTypeScreenState extends State<SelectStudyTypeScreen> {
   final List<StudyType> _studyType = [
-    StudyType("단어카드", Routes.home),
+    StudyType("단어카드", Routes.studyWordCard),
     StudyType("받아쓰기", Routes.home),
     StudyType("주관식", Routes.home),
     StudyType("객관식", Routes.home),
