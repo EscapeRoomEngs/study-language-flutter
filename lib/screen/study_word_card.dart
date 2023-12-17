@@ -19,10 +19,7 @@ class _StudyWordCardScreenState extends State<StudyWordCardScreen> {
 
   @override
   Widget build(BuildContext context) {
-    String? themePath = ModalRoute
-        .of(context)
-        ?.settings
-        .arguments as String?;
+    String? themePath = ModalRoute.of(context)?.settings.arguments as String?;
 
     return Scaffold(
         appBar: BaseAppBar(
