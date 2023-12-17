@@ -18,11 +18,7 @@ class _BasicScreenState extends State<BasicScreen> {
       appBar: BaseAppBar(title: _bottomBarType[_selectedIndex].title),
       body: PageView(
         controller: _pageController,
-        children: const [
-          ReportComponent(),
-          HomeComponent(),
-          ProfileComponent()
-        ],
+        children: _bottomBarType.map((e) => e.widget).toList(),
         onPageChanged: (page) {
           setState(() {
             _selectedIndex = page;
@@ -39,9 +35,9 @@ class _BasicScreenState extends State<BasicScreen> {
   int _selectedIndex = 1;
 
   final List<BottomBarType> _bottomBarType = [
-    BottomBarType("report", "리포트"),
-    BottomBarType("home", "홈"),
-    BottomBarType("profile", "프로필")
+    BottomBarType("report", "리포트", const ReportComponent()),
+    BottomBarType("home", "홈", const HomeComponent()),
+    BottomBarType("profile", "프로필", const ProfileComponent())
   ];
 
   Widget bottomNavigation() {
@@ -68,8 +64,9 @@ class _BasicScreenState extends State<BasicScreen> {
 }
 
 class BottomBarType {
-  BottomBarType(this.type, this.title);
+  BottomBarType(this.type, this.title, this.widget);
 
   final String type;
   final String title;
+  final Widget widget;
 }
