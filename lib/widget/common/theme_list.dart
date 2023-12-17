@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:study_language/widget/common/default_button.dart';
 
+import '../../navigation/routes.dart';
 import '../../util/Utils.dart';
 import '../basic/home.dart';
 
@@ -36,7 +37,11 @@ class ThemeList extends StatelessWidget {
                         .map(
                           (e) => DefaultButton(
                               name: "${getThemeName(e).toUpperCase()} 테마",
-                              onClick: () => {}),
+                              onClick: () => {
+                                    Navigator.pushNamed(
+                                        context, Routes.selectStudyType,
+                                        arguments: e)
+                                  }),
                         )
                         .toList()));
           }

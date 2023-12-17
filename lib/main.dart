@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:study_language/screen/basic.dart';
+import 'package:study_language/screen/select_study_type.dart';
 import 'package:study_language/screen/select_theme.dart';
 
 import 'navigation/routes.dart';
@@ -21,7 +22,8 @@ class MainApp extends StatelessWidget {
         ),
         routes: {
           Routes.home: (context) => const BasicScreen(),
-          Routes.selectTheme: (context) => const SelectThemeScreen()
+          Routes.selectTheme: (context) => const SelectThemeScreen(),
+          Routes.selectStudyType: (context) => const SelectStudyTypeScreen()
         });
   }
 }
