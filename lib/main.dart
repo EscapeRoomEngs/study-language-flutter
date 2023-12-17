@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:study_language/screen/home.dart';
+import 'package:study_language/screen/basic.dart';
 import 'package:study_language/screen/select_theme.dart';
+
+import 'navigation/routes.dart';
 
 void main() {
   runApp(const MainApp());
@@ -18,13 +20,8 @@ class MainApp extends StatelessWidget {
           useMaterial3: true,
         ),
         routes: {
-          Routes.home: (context) => const HomeScreen(),
+          Routes.home: (context) => const BasicScreen(),
           Routes.selectTheme: (context) => const SelectThemeScreen()
         });
   }
-}
-
-class Routes {
-  static const String home = "/home";
-  static const String selectTheme = "/selectTheme";
 }
