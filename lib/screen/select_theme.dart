@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:study_language/screen/basic/home_content.dart';
 import 'package:study_language/widget/common/base_app_bar.dart';
 
-import '../widget/basic/home.dart';
 import '../widget/common/theme_list.dart';
 
 class SelectThemeScreen extends StatefulWidget {

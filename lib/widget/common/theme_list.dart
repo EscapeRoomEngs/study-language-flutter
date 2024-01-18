@@ -5,7 +5,7 @@ import 'package:study_language/widget/common/default_button.dart';
 
 import '../../navigation/routes.dart';
 import '../../util/Utils.dart';
-import '../basic/home.dart';
+import '../../screen/basic/home_content.dart';
 
 class ThemeList extends StatelessWidget {
   const ThemeList({super.key, required this.country});

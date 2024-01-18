@@ -50,21 +50,25 @@ class _WordCard extends State<WordCard> {
         child: SizedBox(
           width: double.infinity,
           height: 56.0,
-          child: Stack(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("${selectedIndex + 1}/${widget.wordTheme.length}")
-                ],
-              ),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  CountTime(),
-                ],
-              )
-            ],
+          child: Center(
+            child: Stack(
+              children: [
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("${selectedIndex + 1}/${widget.wordTheme.length}")
+                  ],
+                ),
+                const Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    CountTime(),
+                  ],
+                )
+              ],
+            ),
           ),
         ),
       ),

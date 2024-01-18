@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
 import '../../navigation/routes.dart';
-import '../../screen/select_theme.dart';
-import '../common/icon_vertical_button.dart';
+import '../../widget/common/icon_vertical_button.dart';
 
-class HomeComponent extends StatefulWidget {
-  const HomeComponent({super.key});
+class HomeContent extends StatefulWidget {
+  const HomeContent({super.key});
 
   @override
-  State<HomeComponent> createState() => _HomeComponent();
+  State<HomeContent> createState() => _HomeComponent();
 }
 
-class _HomeComponent extends State<HomeComponent> {
+class _HomeComponent extends State<HomeContent> {
   final List<Country> _country = [
     Country("kr", "한국어", "assets/image/ic_flag_kr.svg"),
     Country("us", "영어", "assets/image/ic_flag_us.svg"),

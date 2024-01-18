@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:study_language/screen/basic.dart';
+import 'package:study_language/screen/basic/basic_screen.dart';
 import 'package:study_language/screen/select_study_type.dart';
 import 'package:study_language/screen/select_theme.dart';
 import 'package:study_language/screen/study_word_card.dart';

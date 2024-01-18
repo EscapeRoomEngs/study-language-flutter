@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:study_language/widget/basic/home.dart';
-import 'package:study_language/widget/basic/profile.dart';
-import 'package:study_language/widget/basic/report.dart';
+import 'package:study_language/screen/basic/home_content.dart';
+import 'package:study_language/screen/basic/profile_content.dart';
+import 'package:study_language/screen/basic/report_content.dart';
 import 'package:study_language/widget/common/base_app_bar.dart';
 
 class BasicScreen extends StatefulWidget {
@@ -35,9 +35,9 @@ class _BasicScreenState extends State<BasicScreen> {
   int _selectedIndex = 1;
 
   final List<BottomBarType> _bottomBarType = [
-    BottomBarType("report", "리포트", const ReportComponent()),
-    BottomBarType("home", "홈", const HomeComponent()),
-    BottomBarType("profile", "프로필", const ProfileComponent())
+    BottomBarType("report", "리포트", const ReportContent()),
+    BottomBarType("home", "홈", const HomeContent()),
+    BottomBarType("profile", "프로필", const ProfileContent())
   ];
 
   Widget bottomNavigation() {
