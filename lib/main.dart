@@ -3,6 +3,7 @@ import 'package:study_language/screen/basic/basic_screen.dart';
 import 'package:study_language/screen/select_study_type.dart';
 import 'package:study_language/screen/select_theme.dart';
 import 'package:study_language/screen/study_word_card.dart';
+import 'package:study_language/theme/study_language_theme.dart';
 
 import 'navigation/routes.dart';
 
@@ -17,10 +18,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         initialRoute: Routes.home,
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
+        theme: StudyLanguageTheme.themeData,
         routes: {
           Routes.home: (context) => const BasicScreen(),
           Routes.selectTheme: (context) => const SelectThemeScreen(),
