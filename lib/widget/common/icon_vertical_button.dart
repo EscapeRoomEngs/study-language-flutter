@@ -24,8 +24,8 @@ class IconVerticalButton extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SvgPicture.asset(image),
-                    const SizedBox(height: 7),
-                    Text(name)
+                    const SizedBox(height: 10),
+                    Text(name, style: Theme.of(context).textTheme.bodySmall)
                   ],
                 ))));
   }

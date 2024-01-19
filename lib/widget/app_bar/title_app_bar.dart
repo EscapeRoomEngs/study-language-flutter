@@ -23,5 +23,5 @@ class TitleAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(54);
+  Size get preferredSize => const Size.fromHeight(56);
 }

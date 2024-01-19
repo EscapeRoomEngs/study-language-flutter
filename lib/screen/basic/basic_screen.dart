@@ -45,10 +45,14 @@ class _BasicScreenState extends State<BasicScreen> {
       selectedFontSize: 0,
       unselectedFontSize: 0,
       items: _bottomBarType
-          .map((e) => BottomNavigationBarItem(
-              icon: Text(e.title,
-                  style: const TextStyle(color: Color(0xFFB0B0B0))),
-              activeIcon: Text(e.title),
+          .map((item) => BottomNavigationBarItem(
+              icon: Text(item.title,
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyLarge
+                      ?.copyWith(color: const Color(0xffb0b0b0))),
+              activeIcon: Text(item.title,
+                  style: Theme.of(context).textTheme.titleLarge),
               label: ""))
           .toList(),
       currentIndex: _selectedIndex,

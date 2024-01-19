@@ -24,12 +24,12 @@ class _HomeComponent extends State<HomeContent> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: _country
-            .map((e) => IconVerticalButton(
-                name: e.name,
-                image: e.image,
+            .map((item) => IconVerticalButton(
+                name: item.name,
+                image: item.image,
                 onClick: () => {
                       Navigator.pushNamed(context, Routes.selectTheme,
-                          arguments: e)
+                          arguments: item)
                     }))
             .toList());
   }
