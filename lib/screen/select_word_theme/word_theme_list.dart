@@ -1,14 +1,14 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:study_language/widget/common/default_button.dart';
 
 import '../../navigation/routes.dart';
 import '../../util/Utils.dart';
-import '../../screen/basic/home_content.dart';
+import '../../widget/button/filled_text_button.dart';
+import '../basic/home_content.dart';
 
-class ThemeList extends StatelessWidget {
-  const ThemeList({super.key, required this.country});
+class WordThemeList extends StatelessWidget {
+  const WordThemeList({super.key, required this.country});
 
   final Country country;
 
@@ -35,12 +35,13 @@ class ThemeList extends StatelessWidget {
                 child: Column(
                     children: data
                         .map(
-                          (e) => DefaultButton(
-                              name: "${getThemeName(e).toUpperCase()} 테마",
+                          (item) => FilledTextButton(
+                              alignment: Alignment.centerLeft,
+                              name: "${getThemeName(item).toUpperCase()}테마",
                               onClick: () => {
                                     Navigator.pushNamed(
                                         context, Routes.selectStudyType,
-                                        arguments: e)
+                                        arguments: item)
                                   }),
                         )
                         .toList()));

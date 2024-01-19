@@ -44,6 +44,7 @@ class _BasicScreenState extends State<BasicScreen> {
     return BottomNavigationBar(
       selectedFontSize: 0,
       unselectedFontSize: 0,
+      backgroundColor: Colors.transparent,
       items: _bottomBarType
           .map((item) => BottomNavigationBarItem(
               icon: Text(item.title,

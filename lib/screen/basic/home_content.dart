@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../navigation/routes.dart';
-import '../../widget/common/icon_vertical_button.dart';
+import '../../widget/button/icon_vertical_button.dart';
 
 class HomeContent extends StatefulWidget {
   const HomeContent({super.key});

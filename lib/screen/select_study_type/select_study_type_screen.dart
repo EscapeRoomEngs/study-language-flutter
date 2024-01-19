@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:study_language/navigation/routes.dart';
 import 'package:study_language/util/Utils.dart';
 import 'package:study_language/widget/app_bar/title_app_bar.dart';
-import 'package:study_language/widget/common/default_button.dart';
+import 'package:study_language/widget/button/filled_text_button.dart';
 
 class SelectStudyTypeScreen extends StatefulWidget {
   const SelectStudyTypeScreen({super.key});
@@ -29,14 +29,14 @@ class _SelectStudyTypeScreenState extends State<SelectStudyTypeScreen> {
               Navigator.pop(context);
             },
             title: themePath != null
-                ? "${getThemeName(themePath).toUpperCase()} 테마"
+                ? "${getThemeName(themePath).toUpperCase()}테마"
                 : ""),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: _studyType
-                .map((item) => DefaultButton(
+                .map((item) => FilledTextButton(
                       name: item.title,
                       onClick: () {
                         Navigator.pushNamed(context, item.route,

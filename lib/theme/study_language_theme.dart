@@ -8,7 +8,9 @@ class StudyLanguageTheme {
   static ThemeData darkThemeData() {
     final theme = ThemeData.dark();
     return theme.copyWith(
-        textTheme: _buildTextTheme(theme.textTheme), useMaterial3: true);
+        scaffoldBackgroundColor: const Color(0xff171717),
+        textTheme: _buildTextTheme(theme.textTheme),
+        useMaterial3: true);
   }
 
   static TextTheme _buildTextTheme(TextTheme theme) {
