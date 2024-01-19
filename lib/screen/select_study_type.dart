@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:study_language/navigation/routes.dart';
 import 'package:study_language/util/Utils.dart';
-import 'package:study_language/widget/common/base_app_bar.dart';
+import 'package:study_language/widget/app_bar/title_app_bar.dart';
 import 'package:study_language/widget/common/default_button.dart';
 
 class SelectStudyTypeScreen extends StatefulWidget {
@@ -24,7 +24,10 @@ class _SelectStudyTypeScreenState extends State<SelectStudyTypeScreen> {
     String? themePath = ModalRoute.of(context)?.settings.arguments as String?;
 
     return Scaffold(
-        appBar: BaseAppBar(
+        appBar: TitleAppBar(
+            onClickBack: () {
+              Navigator.pop(context);
+            },
             title: themePath != null
                 ? "${getThemeName(themePath).toUpperCase()} 테마"
                 : ""),
@@ -33,10 +36,10 @@ class _SelectStudyTypeScreenState extends State<SelectStudyTypeScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: _studyType
-                .map((e) => DefaultButton(
-                      name: e.title,
+                .map((item) => DefaultButton(
+                      name: item.title,
                       onClick: () {
-                        Navigator.pushNamed(context, e.route,
+                        Navigator.pushNamed(context, item.route,
                             arguments: themePath ?? "");
                       },
                     ))

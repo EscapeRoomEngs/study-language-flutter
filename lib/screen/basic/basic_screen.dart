@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:study_language/screen/basic/home_content.dart';
 import 'package:study_language/screen/basic/profile_content.dart';
 import 'package:study_language/screen/basic/report_content.dart';
-import 'package:study_language/widget/common/base_app_bar.dart';
+import 'package:study_language/widget/app_bar/title_app_bar.dart';
 
 class BasicScreen extends StatefulWidget {
   const BasicScreen({super.key});
@@ -15,7 +15,7 @@ class _BasicScreenState extends State<BasicScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: BaseAppBar(title: _bottomBarType[_selectedIndex].title),
+      appBar: TitleAppBar(title: _bottomBarType[_selectedIndex].title),
       body: PageView(
         controller: _pageController,
         children: _bottomBarType.map((e) => e.widget).toList(),
@@ -35,9 +35,9 @@ class _BasicScreenState extends State<BasicScreen> {
   int _selectedIndex = 1;
 
   final List<BottomBarType> _bottomBarType = [
-    BottomBarType("report", "리포트", const ReportContent()),
-    BottomBarType("home", "홈", const HomeContent()),
-    BottomBarType("profile", "프로필", const ProfileContent())
+    BottomBarType("리포트", const ReportContent()),
+    BottomBarType("홈", const HomeContent()),
+    BottomBarType("프로필", const ProfileContent())
   ];
 
   Widget bottomNavigation() {
@@ -64,9 +64,8 @@ class _BasicScreenState extends State<BasicScreen> {
 }
 
 class BottomBarType {
-  BottomBarType(this.type, this.title, this.widget);
+  BottomBarType(this.title, this.widget);
 
-  final String type;
   final String title;
   final Widget widget;
 }

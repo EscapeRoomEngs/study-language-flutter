@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:study_language/screen/basic/home_content.dart';
-import 'package:study_language/widget/common/base_app_bar.dart';
+import 'package:study_language/widget/app_bar/title_app_bar.dart';
 
 import '../widget/common/theme_list.dart';
 
@@ -17,7 +17,12 @@ class _SelectThemeScreenState extends State<SelectThemeScreen> {
     Country? country = ModalRoute.of(context)?.settings.arguments as Country?;
 
     return Scaffold(
-      appBar: BaseAppBar(title: country != null ? country.name : ""),
+      appBar: TitleAppBar(
+        title: country != null ? country.name : "",
+        onClickBack: () {
+          Navigator.pop(context);
+        },
+      ),
       body: ThemeList(
         country: country ?? Country("", "", ""),
       ),

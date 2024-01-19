@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:study_language/widget/common/base_app_bar.dart';
+import 'package:study_language/widget/app_bar/title_app_bar.dart';
 
 import '../navigation/routes.dart';
 import '../util/Utils.dart';
@@ -22,7 +22,7 @@ class _StudyWordCardScreenState extends State<StudyWordCardScreen> {
     String? themePath = ModalRoute.of(context)?.settings.arguments as String?;
 
     return Scaffold(
-        appBar: BaseAppBar(
+        appBar: TitleAppBar(
             title: themePath != null
                 ? "${getThemeName(themePath).toUpperCase()} 테마"
                 : ""),
