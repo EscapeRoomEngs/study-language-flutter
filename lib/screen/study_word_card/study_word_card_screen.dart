@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:study_language/widget/app_bar/title_app_bar.dart';
 
-import '../navigation/routes.dart';
-import '../util/Utils.dart';
-import '../widget/common/word_list.dart';
+import '../../navigation/routes.dart';
+import '../../util/Utils.dart';
+import '../../widget/common/word_list.dart';
 
 class StudyWordCardScreen extends StatefulWidget {
   const StudyWordCardScreen({super.key});

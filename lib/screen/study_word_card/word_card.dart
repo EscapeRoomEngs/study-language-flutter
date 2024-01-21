@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../model/word_theme.dart';
-import 'count_time.dart';
+import '../../widget/common/count_time.dart';
 
 class WordCard extends StatefulWidget {
   final List<WordTheme> wordTheme;

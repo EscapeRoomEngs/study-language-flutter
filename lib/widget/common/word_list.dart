@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:study_language/model/word_theme.dart';
-import 'package:study_language/widget/common/word_card.dart';
+import 'package:study_language/screen/study_word_card/word_card.dart';
 
 import '../../navigation/routes.dart';
 

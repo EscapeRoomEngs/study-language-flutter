@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:study_language/screen/basic/basic_screen.dart';
 import 'package:study_language/screen/select_study_type/select_study_type_screen.dart';
 import 'package:study_language/screen/select_word_theme/select_word_theme_screen.dart';
-import 'package:study_language/screen/study_word_card.dart';
+import 'package:study_language/screen/study_word_card/study_word_card_screen.dart';
 import 'package:study_language/theme/study_language_theme.dart';
 
 import 'navigation/routes.dart';
